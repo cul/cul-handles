@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "cul-handles"
     gem.summary = %Q{CUL Handle Client}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.description = %Q{Columbia client to deal with handle server}
     gem.email = "tastyhat@jamesstuart.org"
     gem.homepage = "http://github.com/tastyhat/cul-handles"
     gem.authors = ["James Stuart"]
