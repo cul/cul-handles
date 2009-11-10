@@ -23,9 +23,31 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "cul-handles.gemspec",
      "lib/cul-handles.rb",
+     "lib/cul/handles/base_message.rb",
+     "lib/cul/handles/base_request.rb",
+     "lib/cul/handles/base_response.rb",
+     "lib/cul/handles/challenge_answer_request.rb",
+     "lib/cul/handles/challenge_response.rb",
+     "lib/cul/handles/client.rb",
+     "lib/cul/handles/create_handle_request.rb",
+     "lib/cul/handles/delete_handle_request.rb",
+     "lib/cul/handles/delete_value_request.rb",
+     "lib/cul/handles/handle_value_request.rb",
+     "lib/cul/handles/hdl.rb",
+     "lib/cul/handles/modify_value_request.rb",
+     "lib/cul/handles/resolution_request.rb",
+     "lib/cul/handles/resolution_response.rb",
+     "lib/cul/handles/session_request.rb",
+     "lib/cul/handles/session_setup_response.rb",
+     "lib/cul/handles/set_value_request.rb",
+     "test/authn_test.rb",
      "test/cul-handles_test.rb",
-     "test/test_helper.rb"
+     "test/dh_test.rb",
+     "test/resolution_test.rb",
+     "test/test_helper.rb",
+     "test/unsigned_integer_test.rb"
   ]
   s.homepage = %q{http://github.com/tastyhat/cul-handles}
   s.rdoc_options = ["--charset=UTF-8"]
