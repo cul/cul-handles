@@ -2,7 +2,7 @@ module Cul
   module Handles
     class CreateHandleRequest < HandleValueRequest
       def initialize(handle)
-        super()
+        super(handle)
         @opCode = asBytes(Hdl::OC_CREATE_HANDLE)
       end
       def valid?

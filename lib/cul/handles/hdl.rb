@@ -181,7 +181,7 @@ module Cul
         length = fromBytes(data[offset...offset+4])
         pstring = ""
         if length > 0
-          pstring = data[offset+4...offset+4+length].pack('C*')
+          pstring = data[offset+4...offset+4+length].pack('C*').unpack('U*').pack('U*')
           octetsRead = octetsRead + length
         end
         return [octetsRead,pstring]    

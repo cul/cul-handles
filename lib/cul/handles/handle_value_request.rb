@@ -10,6 +10,7 @@ module Cul
         self.returnRequestDigest=(true)
         @handle = toProtocolString(handle)
         @values = []
+        @opCode = asBytes(Hdl::OC_MODIFY_VALUE)
       end
       def addURLValue(urlValue)
         # serialize handle value
@@ -43,47 +44,6 @@ module Cul
           result.concat(value.serialize)
         }
         @body = result
-      end
-    end
-    class CreateHandleRequest < HandleValueRequest
-      def initialize(handle)
-        super(handle)
-        @opCode = asBytes(Hdl::OC_CREATE_HANDLE)
-      end
-      def valid?
-        if not @handle
-          return false
-        end
-        @values.each { |value|
-          if value.type == "HS_ADMIN"
-            return true
-          end
-        }
-        return false
-      end
-    end
-    class AddValueRequest < HandleValueRequest
-      def initialize(handle)
-        super(handle)
-        @opCode = asBytes(Hdl::OC_ADD_VALUE)
-      end
-    end
-    class ModifyValueRequest < HandleValueRequest
-      def initialize(handle)
-        super(handle)
-        @opCode = asBytes(Hdl::OC_MODIFY_VALUE)
-      end
-    end
-    class DeleteValueRequest < HandleValueRequest
-      def initialize(handle)
-        super(handle)
-        @opCode = asBytes(Hdl::OC_REMOVE_VALUE)
-      end
-      def addAdminValue(adminHandle, permissions, index)
-        if (index.eql?(100))
-          raise "Deleting the admin value would leave the handle without an administrator; Use modify value instead."
-        end
-        super(adminHandle, permissions, index)
       end
     end
   end

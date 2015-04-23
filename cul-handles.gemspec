@@ -5,63 +5,23 @@
 
 Gem::Specification.new do |s|
   s.name = %q{cul-handles}
-  s.version = "0.2.0"
+  s.version = File.read('VERSION')
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["James Stuart"]
+  s.authors = ["James Stuart","Ben Armintor"]
   s.date = %q{2009-11-11}
   s.description = %q{Columbia client to deal with handle server}
-  s.email = %q{tastyhat@jamesstuart.org}
+  s.email = %q{tastyhat@jamesstuart.org armintor@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
   ]
-  s.files = [
-    ".document",
-     ".gitignore",
-     "LICENSE",
-     "README.rdoc",
-     "Rakefile",
-     "VERSION",
-     "cul-handles.gemspec",
-     "lib/cul-handles.rb",
-     "lib/cul/handles/base_message.rb",
-     "lib/cul/handles/base_request.rb",
-     "lib/cul/handles/base_response.rb",
-     "lib/cul/handles/challenge_answer_request.rb",
-     "lib/cul/handles/challenge_response.rb",
-     "lib/cul/handles/client.rb",
-     "lib/cul/handles/create_handle_request.rb",
-     "lib/cul/handles/delete_handle_request.rb",
-     "lib/cul/handles/delete_value_request.rb",
-     "lib/cul/handles/handle_value_request.rb",
-     "lib/cul/handles/hdl.rb",
-     "lib/cul/handles/modify_value_request.rb",
-     "lib/cul/handles/resolution_request.rb",
-     "lib/cul/handles/resolution_response.rb",
-     "lib/cul/handles/session_request.rb",
-     "lib/cul/handles/session_setup_response.rb",
-     "lib/cul/handles/set_value_request.rb",
-     "test/authn_test.rb",
-     "test/cul-handles_test.rb",
-     "test/dh_test.rb",
-     "test/resolution_test.rb",
-     "test/test_helper.rb",
-     "test/unsigned_integer_test.rb"
-  ]
-  s.homepage = %q{http://github.com/tastyhat/cul-handles}
+  s.files = Dir['{lib}/**/*', 'Rakefile', 'README.rdoc', 'LICENSE','VERSION']
+  s.test_files = Dir['test/**/*']
+  s.homepage = %q{http://github.com/cul/cul-handles}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
   s.summary = %q{CUL Handle Client}
-  s.test_files = [
-    "test/authn_test.rb",
-     "test/cul-handles_test.rb",
-     "test/dh_test.rb",
-     "test/resolution_test.rb",
-     "test/test_helper.rb",
-     "test/unsigned_integer_test.rb"
-  ]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
@@ -75,5 +35,6 @@ Gem::Specification.new do |s|
   else
     s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
   end
+  s.add_development_dependency('test-unit')
 end
 

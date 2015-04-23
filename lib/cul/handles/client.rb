@@ -78,6 +78,7 @@ module Cul
         return sendAuthRequest(req, adminSecret)
       end
       def addHandleMaintainer(adminSecret,handle,maintainerHandle)
+        Rails.logger.info('================= addHandleMaintainer 1')
         req = Cul::Handles::AddValueRequest.new(handle)
         req.addAdminValue(maintainerHandle, 0x0070, INDEX_MAINTAINER_HANDLE)    
         initRequest(req)

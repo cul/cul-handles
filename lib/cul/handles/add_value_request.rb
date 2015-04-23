@@ -1,9 +1,9 @@
 module Cul
   module Handles
-    class ModifyValueRequest < HandleValueRequest
+    class AddValueRequest < HandleValueRequest
       def initialize(handle)
         super(handle)
-        @opCode = asBytes(Hdl::OC_MODIFY_VALUE)
+        @opCode = asBytes(Hdl::OC_ADD_VALUE)
       end
     end
   end

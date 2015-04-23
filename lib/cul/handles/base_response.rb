@@ -1,6 +1,5 @@
 module Cul
   module Handles
-
     class BaseResponse < BaseMessage
       include Hdl
       def initialize
