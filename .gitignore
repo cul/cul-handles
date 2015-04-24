@@ -5,3 +5,5 @@ coverage
 rdoc
 pkg
 Gemfile.lock
+tmp
+coverage

@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+require 'test_helper'
 module Cul
   module Handles
     class DHTest < Test::Unit::TestCase

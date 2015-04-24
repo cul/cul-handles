@@ -23,18 +23,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.summary = %q{CUL Handle Client}
 
-  if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
-    s.specification_version = 3
-
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
-    else
-      s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
-    end
-  else
-    s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
-  end
+  s.add_development_dependency('thoughtbot-shoulda')
   s.add_development_dependency('test-unit')
+  s.add_development_dependency('simplecov-rcov')
 end
 
