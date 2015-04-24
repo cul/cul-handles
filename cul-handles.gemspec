@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.summary = %q{CUL Handle Client}
 
+  s.add_development_dependency('rake')
   s.add_development_dependency('thoughtbot-shoulda')
   s.add_development_dependency('test-unit')
   s.add_development_dependency('simplecov-rcov')
